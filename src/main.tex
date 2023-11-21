@@ -1,0 +1,151 @@
+\documentclass[
+oneside
+]{scrbook}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{fontspec}
+%\usepackage[default]{sourcesanspro}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage[backref=false,
+           final=true,
+           pdfpagelabels
+           ]{hyperref}
+\usepackage{tikz}
+\usepackage{xspace}
+\usepackage{nchairx}
+\usepackage{gitinfo2}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{faktor}
+\usepackage[
+disable
+]{todonotes}
+\usepackage{fancyhdr}
+
+
+\usetikzlibrary{arrows,
+  intersections,
+  matrix,
+  calc,
+  fadings,
+  decorations.pathreplacing,
+  positioning,
+  patterns,
+  decorations.markings,
+  decorations.pathmorphing,
+  knots,
+  cd,
+  tqft}
+
+\KOMAoption{draft}{false}
+\KOMAoption{overfullrule}{false}
+\KOMAoption{paper}{A4}
+\KOMAoption{pagesize}{auto}
+\KOMAoptions{DIV=15,BCOR=0mm,fontsize=11pt,toc=graduated}
+
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0ex}
+\renewcommand{\footrulewidth}{0.4pt}
+\lfoot{\fancyplain{}{{\footnotesize
+            Grothendieck-Rings of Grothendieck Verdier Categories
+        }}}
+\cfoot{\fancyplain{}{}}
+\rfoot{\fancyplain{}{{\footnotesize \gitAuthorIsoDate{} Hash: \texttt{\gitAbbrevHash}}}}
+\lhead[\fancyplain{}{\thepage{}}]{}
+\chead[\fancyplain{}{\leftmark}]{\fancyplain{}{\rightmark}}
+\rhead[]{\fancyplain{}{\thepage{}}}
+
+\makeatletter
+\newcommand{\chairxauthorbibfont}{\textsc}
+\newcommand{\chairxtitlebibfont}{\textit}
+\newcommand{\chairxseriesbibfont}{\textit}
+\newcommand{\chairxvolumebibfont}{\textbf}
+\newcommand{\bibnote}[2]{\nocite{#1}\@namedef{#1chairxnote}{#2}}
+\makeatother
+
+
+\input{makros.tex}
+
+\addbibresource{../bibliography/articles.bib}
+\addbibresource{../bibliography/books.bib}
+\addbibresource{/home/maphias/git/bib/dqbook.bib}
+\addbibresource{/home/maphias/git/bib/dqarticle.bib}
+\addbibresource{/home/maphias/git/bib/dqproceeding.bib}
+\addbibresource{/home/maphias/git/bib/dqthesis.bib}
+\addbibresource{/home/maphias/git/bib/preprints.bib}
+\addbibresource{/home/maphias/git/bib/misc.bib}
+\addbibresource{/home/maphias/git/bib/notes.bib}
+\addbibresource{/home/maphias/git/bib/dqprocentry.bib}
+\addbibresource{/home/maphias/git/bib/script.bib}
+
+\begin{document}
+
+\begin{titlepage}
+    {
+        \begin{center}
+            \thispagestyle{empty}
+            \includegraphics[width= \linewidth]{../included_media/Header.png}
+            \linebreak
+            \vspace{1.5\baselineskip}
+            \linebreak
+            {\Huge
+                \textbf{Grothendieck-Rings of Grothendieck Verdier Categories}\\}
+            \vspace{1cm}
+            {\Large
+                Julius-Maximilians-Universität Würzburg\\
+                Fakultät für Mathematik und Informatik\\
+                Lehrstuhl für mathematische Physik\\}
+            \vspace{1.5\baselineskip}
+            \includegraphics[width= .3 \linewidth]{../included_media/siegel.png}
+            \vspace{1.5\baselineskip}
+            \linebreak
+            {\large \normalfont \textbf{Masterarbeit}\\
+                zur Erlangung des akademischen Grades\\
+                \vspace{1.2\baselineskip}
+                \textbf{Master of Science}\\
+                im Fach Mathematische Physik\\
+                \vspace{1.2\baselineskip}
+                eingereicht von:\\
+                \textbf{Matthias Frerichs}\\
+                \vspace{1.2\baselineskip}
+                betreut von:\\
+                \textbf{Gregor Schaumann}\\
+                \vspace{1.5\baselineskip}
+                Würzburg, \today
+            }
+        \end{center}
+    }
+\end{titlepage}
+\pagenumbering{roman}
+
+\pagestyle{fancy}
+
+\tableofcontents
+
+\input{introduction.tex}
+
+\mainmatter
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\input{category_theory_basics.tex}
+\input{gv_cats.tex}
+\input{z+-rings-and-gv-rings.tex}
+\input{categorification-of-z+-rings.tex}
+\input{classification-of-quiver-rings-with-gv-struct.tex}
+%\input{for-gregor.tex}
+
+\printbibliography
+% \bibliography{../bibliography/articles.bib,../bibliography/books.bib}
+
+\input{affidavit.tex}
+\end{document}
+
+%%% Local Variables:
+%%% mode:
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
