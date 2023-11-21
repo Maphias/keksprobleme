@@ -1,0 +1,28 @@
+\section{Approximation of $\pi$ with cooked Spaghetti}
+
+Consider a square with edges of length $L\in \field{R}_{\geq 0}$. If
+we now consider cooked spaghetti of length $\ell \leq L$ and throw
+this cooked spaghetti into the square. Assume this can be modeled as a
+random walk of length $\ell$ from one endpoint of the spaghetti.
+
+Can we approximate $\pi$ by the average number of intersections a
+spaghetti has with the square.
+
+\begin{proof}
+  For more than ~100 steps, the probability distribution for the
+  random walk to end at a specific point is a function of the distance
+  to the origin. This is given by a Raylight distribution
+  \begin{align}
+    P(r)=\frac{2r}{N}\E^{-r^2/N}
+  \end{align}
+  here the step length was $1$.
+
+  Assuming now that this step length is $\ell$, we get
+  \begin{align}
+    P(r)=\frac{2r}{N \ell}\E^{\frac{-r^2}{N \ell}}
+  \end{align}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

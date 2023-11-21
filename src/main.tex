@@ -49,7 +49,7 @@ disable
 \renewcommand{\headrulewidth}{0ex}
 \renewcommand{\footrulewidth}{0.4pt}
 \lfoot{\fancyplain{}{{\footnotesize
-            Grothendieck-Rings of Grothendieck Verdier Categories
+            Keksprobleme
         }}}
 \cfoot{\fancyplain{}{}}
 \rfoot{\fancyplain{}{{\footnotesize \gitAuthorIsoDate{} Hash: \texttt{\gitAbbrevHash}}}}
@@ -86,35 +86,7 @@ disable
     {
         \begin{center}
             \thispagestyle{empty}
-            \includegraphics[width= \linewidth]{../included_media/Header.png}
-            \linebreak
-            \vspace{1.5\baselineskip}
-            \linebreak
-            {\Huge
-                \textbf{Grothendieck-Rings of Grothendieck Verdier Categories}\\}
-            \vspace{1cm}
-            {\Large
-                Julius-Maximilians-Universität Würzburg\\
-                Fakultät für Mathematik und Informatik\\
-                Lehrstuhl für mathematische Physik\\}
-            \vspace{1.5\baselineskip}
-            \includegraphics[width= .3 \linewidth]{../included_media/siegel.png}
-            \vspace{1.5\baselineskip}
-            \linebreak
-            {\large \normalfont \textbf{Masterarbeit}\\
-                zur Erlangung des akademischen Grades\\
-                \vspace{1.2\baselineskip}
-                \textbf{Master of Science}\\
-                im Fach Mathematische Physik\\
-                \vspace{1.2\baselineskip}
-                eingereicht von:\\
-                \textbf{Matthias Frerichs}\\
-                \vspace{1.2\baselineskip}
-                betreut von:\\
-                \textbf{Gregor Schaumann}\\
-                \vspace{1.5\baselineskip}
-                Würzburg, \today
-            }
+            {\Huge Ein paar Keksprobleme}
         \end{center}
     }
 \end{titlepage}
@@ -124,24 +96,15 @@ disable
 
 \tableofcontents
 
-\input{introduction.tex}
-
 \mainmatter
 \pagenumbering{arabic}
 
 \setcounter{page}{1}
 
-\input{category_theory_basics.tex}
-\input{gv_cats.tex}
-\input{z+-rings-and-gv-rings.tex}
-\input{categorification-of-z+-rings.tex}
-\input{classification-of-quiver-rings-with-gv-struct.tex}
-%\input{for-gregor.tex}
+\input{keks-1:random-walk.tex}
 
 \printbibliography
-% \bibliography{../bibliography/articles.bib,../bibliography/books.bib}
 
-\input{affidavit.tex}
 \end{document}
 
 %%% Local Variables:
